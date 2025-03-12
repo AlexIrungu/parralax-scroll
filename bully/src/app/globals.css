@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brown: #8B5A2B;
+  --dark-brown: #6B4226;
+  --purple: #5D3FD3;
+  --dark-purple: #4B2E8F;
+  --off-white: #F5F5F5;
+  --black: #1A1A1A;
+  --transition: all 0.3s ease;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  color: var(--off-white);
+  font-family: var(--font-geist-sans, sans-serif);
+  background-color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.App {
+  position: relative;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  background-color: #8B5A2B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem 3rem;
+}
+
+.menu-shop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.nav-item {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.nav-item:hover {
+  opacity: 0.7;
+}
+
+.hero-cta {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.hero-cta h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.newsletter-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 2rem;
+}
+
+.newsletter-btn:hover {
+  background-color: white;
+  color: var(--brown);
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.album-title {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 3;
+  text-align: right;
+}
+
+.album-title h1 {
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* Artist Section */
+.artist {
+  background-color: var(--purple);
+  position: relative;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.artist-header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.artist-name {
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.artist-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 70vh;
+}
+
+.artist-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 2;
+}
+
+.artist-nav {
+  grid-column: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.album-info {
+  grid-column: 1;
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+
+.album-info h1 {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.streaming {
+  margin-top: 2rem;
+}
+
+.streaming p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.platforms {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.platforms span {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.streaming h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.release-date {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.social-icons, .streaming-icons {
+  position: absolute;
+  top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons {
+  left: 2rem;
+}
+
+.streaming-icons {
+  right: 2rem;
+}
+
+/* Release Section */
+.release {
+  background-color: #476B6B;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-banner {
+  padding: 1rem 3rem;
+  background-color: #476B6B;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.release-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 3rem);
+}
+
+.music-video {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.release-date {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.music-video h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.music-video p {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-btn:hover {
+  background-color: white;
+  color: #476B6B;
+}
+
+.artist-portrait {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--purple);
+}
+
+/* Newsletter Section */
+.newsletter {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.newsletter-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: brightness(0.6) saturate(1.2);
+}
+
+.newsletter-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.newsletter-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.newsletter-content p {
+  max-width: 80%;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.signature {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signature p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--black);
+  padding: 4rem 3rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.social-links, .streaming-links {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.footer-nav {
+  margin: 3rem 0;
+}
+
+.footer-nav p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.footer-links h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.footer-links h3:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.newsletter-footer {
+  margin-bottom: 2rem;
+}
+
+.newsletter-footer p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-footer button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 2rem;
+}
+
+.newsletter-footer button:hover {
+  background-color: white;
+  color: var(--black);
+}
+
+.shop-preview {
+  width: 100%;
+  height: 40vh;
+  margin: 2rem 0;
+}
+
+.shop-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .album-title h1 {
+    font-size: 3.5rem;
+  }
+  
+  .nav-item {
+    font-size: 2.8rem;
+  }
+  
+  .album-info h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-background {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .hero-content {
+    background-color: rgba(139, 90, 43, 0.5);
+  }
+  
+  .artist-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .artist-image {
+    grid-column: 1;
+    height: 50vh;
+    margin-bottom: 2rem;
+  }
+  
+  .album-info {
+    grid-column: 1;
+    margin-top: 1rem;
+  }
+  
+  .release-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    font-size: 2rem;
+  }
+  
+  .album-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .newsletter-content h1 {
+    font-size: 2.5rem;
+  }
+}
