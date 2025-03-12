@@ -1,0 +1,151 @@
+.release {
+    background-color: #476B6B;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    color: var(--off-white);
+  }
+  
+  .achievementBanner {
+    padding: 1rem 3rem;
+    background-color: #476B6B;
+    color: var(--off-white);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  
+  .releaseContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 3rem);
+  }
+  
+  .musicVideo {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .releaseDate {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .musicVideo h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  
+  .musicVideo p {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  
+  .videoThumbnail {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: rgba(0,0,0,0.6);
+    color: var(--off-white);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .videoThumbnail:hover .playButton {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+  }
+  
+  .navBtn {
+    background-color: transparent;
+    border: 1px solid var(--off-white);
+    color: var(--off-white);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+  
+  .navBtn:hover {
+    background-color: var(--off-white);
+    color: #476B6B;
+  }
+  
+  .artistPortrait {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple);
+    overflow: hidden;
+  }
+  
+  @media (max-width: 1200px) {
+    .musicVideo h2 {
+      font-size: 2.5rem;
+    }
+    
+    .musicVideo {
+      padding: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .releaseContent {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    
+    .artistPortrait {
+      height: 60vh;
+    }
+    
+    .videoThumbnail {
+      height: 40vh;
+    }
+    
+    .achievementBanner {
+      padding: 1rem;
+      font-size: 0.7rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .musicVideo {
+      padding: 2rem 1.5rem;
+    }
+    
+    .musicVideo h2 {
+      font-size: 2rem;
+    }
+    
+    .videoThumbnail {
+      height: 30vh;
+    }
+  }

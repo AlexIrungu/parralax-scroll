@@ -1,0 +1,139 @@
+
+/* // components/ArtistSection/ArtistSection.module.css */
+.artist {
+  background-color: #5D3FD3;
+  position: relative;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.artistHeader {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.artistName {
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.artistContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 70vh;
+}
+
+.artistImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 2;
+}
+
+.artistNav {
+  grid-column: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.albumInfo {
+  grid-column: 1;
+  align-self: flex-start;
+  margin-top: 3rem;
+}
+
+.albumInfo h1 {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.streaming {
+  margin-top: 2rem;
+}
+
+.streaming p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.platforms {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.platforms span {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.streaming h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.socialIcons, .streamingIcons {
+  position: absolute;
+  top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons {
+  left: 2rem;
+}
+
+.streamingIcons {
+  right: 2rem;
+}
+
+.icon {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+.navItem {
+  font-size: 1.5rem;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1200px) {
+  .albumInfo h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .artistContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .artistImage {
+    grid-column: 1;
+    height: 50vh;
+    margin-bottom: 2rem;
+  }
+  
+  .albumInfo {
+    grid-column: 1;
+    margin-top: 1rem;
+  }
+}

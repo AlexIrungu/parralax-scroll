@@ -1,0 +1,102 @@
+.newsletter {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--off-white);
+    overflow: hidden;
+  }
+  
+  .newsletterBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: brightness(0.6) saturate(1.2);
+  }
+  
+  .newsletterContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+  }
+  
+  .newsletterContent h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  
+  .newsletterContent h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+  }
+  
+  .newsletterContent p {
+    max-width: 80%;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+  
+  .newsletterBtn {
+    background-color: transparent;
+    border: 1px solid var(--off-white);
+    color: var(--off-white);
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2rem;
+  }
+  
+  .newsletterBtn:hover {
+    background-color: var(--off-white);
+    color: var(--black);
+  }
+  
+  .signature {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signature p {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+  
+  @media (max-width: 768px) {
+    .newsletterContent h1 {
+      font-size: 3rem;
+    }
+    
+    .newsletterContent p {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .newsletterContent h1 {
+      font-size: 2.5rem;
+    }
+    
+    .newsletterContent h3 {
+      font-size: 1.2rem;
+    }
+    
+    .newsletterContent p {
+      max-width: 100%;
+      font-size: 0.8rem;
+    }
+  }

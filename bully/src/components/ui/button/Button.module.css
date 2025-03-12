@@ -1,0 +1,30 @@
+
+.button {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.outline:hover {
+  background-color: white;
+  color: #8B5A2B;
+}
+
+.primary {
+  background-color: white;
+  border: 1px solid white;
+  color: #8B5A2B;
+}
+
+.primary:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,117 @@
+.footer {
+    background-color: var(--black);
+    padding: 4rem 3rem;
+    color: var(--off-white);
+  }
+  
+  .footerContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .footerCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .socialLinks, .streamingLinks {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  
+  .icon {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .icon:hover {
+    opacity: 0.7;
+  }
+  
+  .footerNav {
+    margin: 3rem 0;
+  }
+  
+  .footerNav p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+  
+  .footerLinks h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footerLinks h3:hover {
+    opacity: 0.7;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+  
+  .newsletterFooter {
+    margin-bottom: 2rem;
+  }
+  
+  .newsletterFooter p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subscribeBtn {
+    background-color: transparent;
+    border: 1px solid var(--off-white);
+    color: var(--off-white);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 2rem;
+  }
+  
+  .subscribeBtn:hover {
+    background-color: var(--off-white);
+    color: var(--black);
+  }
+  
+  .shopPreview {
+    width: 100%;
+    height: 40vh;
+    margin: 2rem 0;
+  }
+  
+  .shopImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .footerContent {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 3rem 1.5rem;
+    }
+    
+    .footerLinks h3 {
+      font-size: 1.5rem;
+    }
+  }
